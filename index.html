@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday from yuvi ❤️</title>
+    <link rel="shortcut icon" href="cake.gif" type="image/x-icon">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+        /* Preloader styles */
+        span {
+            font-family: "Poppins", sans-serif;
+            font-size: 2rem;
+            color: #fff;
+            text-shadow:
+                0 0 10px #fd5c63,
+                0 0 10px #e8366e,
+                0 0 10px #ff8a00,
+                0 0 10px #f7bb00,
+                0 0 10px #a8e063,
+                0 0 10px #37b159,
+                0 0 10px #3d98d3,
+                0 0 10px #7646a1,
+                0 0 20px #fd5c63;
+
+        }
+
+        .preloader {
+            background-color: #282828;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cake-icon {
+            top: 50%;
+            left: 50%;
+            width: 250px;
+            height: 250px;
+            cursor: pointer;
+            box-shadow: 0 0 10px rgba(213, 212, 212, 0.778);
+            border-radius: 10px;
+        }
+
+        .bubble {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: #ff69b4;
+            opacity: 0.5;
+            animation: bubbleAnimation 5s linear infinite;
+        }
+
+        @keyframes bubbleAnimation {
+            0% {
+                transform: translate(0, 100vh) scale(1);
+            }
+
+            100% {
+                transform: translate(200px, -100vh) scale(0.5);
+            }
+        }
+
+        /* Main page styles */
+        body {
+            /* background-color: #f8d7da; */
+            background-color: #282828;
+            text-align: center;
+            padding-top: 50px;
+
+        }
+
+        .birthday-card {
+            background-color: #000;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(129, 127, 127, 0.819);
+            color: #fff;
+        }
+
+        .birthday-card .wish {
+            font-size: 1.4rem;
+        }
+
+        .friend-photo {
+            max-width: 200px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+            box-shadow: 0 0 30px rgba(213, 212, 212, 0.778);
+        }
+
+        .confetti {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            animation: confetti 5s linear infinite;
+        }
+
+        @keyframes confetti {
+            0% {
+                transform: translateY(0) rotate(0);
+                opacity: 1;
+            }
+
+            100% {
+                transform: translateY(-1000px) rotate(720deg);
+                opacity: 0;
+            }
+        }
+
+        #name {
+            font-family: "Poppins", sans-serif;
+            font-size: 2.5rem;
+            text-shadow:
+                0 0 10px #fd5c63,
+                0 0 10px #e8366e,
+                0 0 10px #ff8a00,
+                0 0 10px #f7bb00,
+                0 0 10px #a8e063,
+                0 0 10px #37b159,
+                0 0 10px #3d98d3,
+                0 0 10px #7646a1,
+                0 0 20px #fd5c63;
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="preloader">
+        <span>Click on Photo</span>
+        <img src="photo.jpg" alt="Happy Birthday" class="cake-icon">
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+    </div>
+
+    <div class="container d-none">
+        <div class="birthday-card animate__animated animate__bounceIn">
+            <img src="photo.jpg" alt="Friend's Photo" class="friend-photo">
+            <h1 class="animate__animated animate__bounceIn">Happy Birthday,
+
+                <!-- ==================================================== -->
+                <!-- ==================================================== -->
+                <!-- ==================================================== -->
+                <!-- ==================================================== -->
+                        <!-- Change Name -->
+                <span id="name">Aryan</span>
+
+                <!-- ==================================================== -->
+                <!-- ==================================================== -->
+                <!-- ==================================================== -->
+                <!-- ==================================================== -->
+
+            </h1>
+            <div id="age-container" class="animate__animated animate__bounceIn"></div>
+            <p class="animate__animated animate__bounceIn wish">Wishing you a day filled with joy🎉, laughter😊, and all
+                the
+                things that make you happiest🙃. May this year bring you even more success, love💗, and adventures.
+                Cheers
+                to another amazing year of life.🎉🎉</p>
+        </div>
+    </div>
+    <audio id="background-music" src="happy-birthday.mp3" loop></audio>
+
+    <script>
+        // Preloader click event
+        const preloader = document.querySelector('.preloader');
+        const mainPage = document.querySelector('.container');
+        const cakeIcon = document.querySelector('.cake-icon');
+        const backgroundMusic = document.getElementById('background-music');
+        cakeIcon.addEventListener('click', () => {
+            preloader.style.display = 'none';
+            mainPage.classList.remove('d-none');
+            backgroundMusic.play();
+        });
+        cakeIcon.addEventListener('click', () => {
+            preloader.style.display = 'none';
+            mainPage.classList.remove('d-none');
+        });
+
+        // Friend's age calculation
+        /*=========================================================================================*/
+        /*=========================================================================================*/
+        /*=========================================================================================*/
+        /*=========================================================================================*/
+
+        const friendBirthday = new Date('2009-2-1'); //change Date of Birth YY-MM-DD
+
+        /*=========================================================================================*/
+        /*=========================================================================================*/
+        /*=========================================================================================*/
+        /*=========================================================================================*/
+
+        const today = new Date();
+        const ageInMilliseconds = today - friendBirthday;
+        const ageInSeconds = Math.floor(ageInMilliseconds / 1000);
+        const ageInMinutes = Math.floor(ageInSeconds / 60);
+        const ageInHours = Math.floor(ageInMinutes / 60);
+        const ageInDays = Math.floor(ageInHours / 24);
+        const ageInYears = Math.floor(ageInDays / 365);
+        const ageContainer = document.getElementById('age-container');
+        ageContainer.innerHTML = `
+      <p>🤩 Happy 🎉 ${ageInYears}th 🎉 Birthday 🎂🤷‍♂️</p>
+    `;
+
+        // Confetti animation
+        function createConfetti() {
+            const confetti = document.createElement('div');
+            confetti.classList.add('confetti');
+            confetti.style.left = `${Math.random() * 100}vw`;
+            confetti.style.backgroundColor = `rgb(${Math.random() * 255}, ${Math.random() * 255}, ${Math.random() * 255})`;
+            document.body.appendChild(confetti);
+            setTimeout(() => {
+                confetti.remove();
+            }, 5000);
+        }
+
+        setInterval(createConfetti, 100);
+    </script>
+
+
+</body>
+
+</html>
